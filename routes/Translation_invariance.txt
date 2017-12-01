@@ -1,0 +1,1 @@
+In geometry, a translation "slides" a thing by a: Ta(p) = p + a.

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>{{ title }}</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
+	<script>
+		function isKeyPressed(event){
+			console.log(event);
+			if(event.altKey){
+				//console.dir(event.target.tagName === 'A');
+				console.log(event.target.getAttribute('href'));
+				//alert(event);
+				var url = event.target.getAttribute('href');
+				var patt = /\bwikipedia/g;
+				var res = url.match(patt);
+				if(res != null){
+					//Clean url and display the page title
+					var str = url.replace("https://en.wikipedia.org/wiki/","");
+					console.log(str);
+
+					//Checkpoint: Cleaning done
+							
+					$.ajax({ 
+						url: 'http://localhost:8000/',
+						type: 'POST',
+						data: {
+							title: str
+						}
+					});
+				}
+					else
+						console.log("Its not a wikipedia link");
+			}
+		}
+
+	</script>
+	</head>
+	<body onmousedown="isKeyPressed(event)">
+		{{{ body }}}
+	</body>
+	</html>
+

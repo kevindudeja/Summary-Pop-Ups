@@ -1,0 +1,1 @@
+An artificial neuron is a mathematical function conceived as a model of biological neurons, a neural network.

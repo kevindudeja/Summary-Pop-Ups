@@ -1,0 +1,1 @@
+A feedforward neural network is an artificial neural network wherein connections between the units do not form a cycle.
