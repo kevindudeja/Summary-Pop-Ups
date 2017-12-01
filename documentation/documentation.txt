@@ -1,0 +1,8 @@
+# Use Jquery to trigger function on Mouse Over - Done
+# Print in console if link is wikipedia or not using regex matching - Done
+# Sample Link: https://en.wikipedia.org/wiki/Machine_learning
+# Remove https://en.wikipedia.org/wiki/ from url 
+	- var res = url.replace("https://en.wikipedia.org/wiki/"," ");
+		res = Machine_learning
+#Replace _ with " "
+	res =  Machine learning
